@@ -16,5 +16,16 @@ namespace COMP123_S2019_A5_301045531.Views
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.ORDER_FORM].Hide();
+            Program.Forms[FormName.PRODUCTINFO_FORM].Show();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -110,6 +110,9 @@
     <EmbeddedResource Include="Views\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ProductInfoForm.resx">
       <DependentUpon>ProductInfoForm.cs</DependentUpon>
     </EmbeddedResource>

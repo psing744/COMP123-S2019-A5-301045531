@@ -73,6 +73,7 @@
             this.webcamOutputLabel = new System.Windows.Forms.Label();
             this.cpuTypeLabel = new System.Windows.Forms.Label();
             this.cpuTypeOutputLabel = new System.Windows.Forms.Label();
+            this.selectAnotherProductButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.productOverviewGroupBox.SuspendLayout();
             this.productInfoGroupBox.SuspendLayout();
@@ -106,7 +107,7 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // saveToolStripMenuItem
@@ -121,8 +122,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -137,6 +139,7 @@
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.selectAnotherProductButton_Click);
             // 
             // NextButton
             // 
@@ -146,6 +149,7 @@
             this.NextButton.TabIndex = 2;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // CancelButton
             // 
@@ -155,6 +159,7 @@
             this.CancelButton.TabIndex = 3;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // ProductIdLabel
             // 
@@ -197,7 +202,7 @@
             this.costLabel.Name = "costLabel";
             this.costLabel.Size = new System.Drawing.Size(100, 23);
             this.costLabel.TabIndex = 4;
-            this.costLabel.Text = "Product ID";
+            this.costLabel.Text = "Cost";
             this.costLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // conditionOutputLabel
@@ -534,6 +539,16 @@
             this.cpuTypeOutputLabel.TabIndex = 4;
             this.cpuTypeOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // selectAnotherProductButton
+            // 
+            this.selectAnotherProductButton.Location = new System.Drawing.Point(407, 390);
+            this.selectAnotherProductButton.Name = "selectAnotherProductButton";
+            this.selectAnotherProductButton.Size = new System.Drawing.Size(152, 48);
+            this.selectAnotherProductButton.TabIndex = 2;
+            this.selectAnotherProductButton.Text = "Select Another Product";
+            this.selectAnotherProductButton.UseVisualStyleBackColor = true;
+            this.selectAnotherProductButton.Click += new System.EventHandler(this.selectAnotherProductButton_Click);
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +558,7 @@
             this.Controls.Add(this.techSpecsGroupBox);
             this.Controls.Add(this.productInfoGroupBox);
             this.Controls.Add(this.productOverviewGroupBox);
+            this.Controls.Add(this.selectAnotherProductButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.menuStrip);
@@ -606,5 +622,6 @@
         private System.Windows.Forms.Label lcdSizeLabel;
         private System.Windows.Forms.Label memoryOutputLabel;
         private System.Windows.Forms.Label memoryLabel;
+        private System.Windows.Forms.Button selectAnotherProductButton;
     }
 }
