@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,8 @@ namespace COMP123_S2019_A5_301045531.Views
         {
             using(var db=new DollarComputersContext())
             {
-
+                db.products.Load();
+                productBindingSource.DataSource = db.products.Local.ToBindingList();
             }
         }
 

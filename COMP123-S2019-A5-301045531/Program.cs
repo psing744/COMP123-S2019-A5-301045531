@@ -34,7 +34,7 @@ namespace COMP123_S2019_A5_301045531
 
             product = new Product();
 
-            Application.Run(Forms[FormName.SELECT_FORM]);
+            Application.Run(Forms[FormName.SPLASH_FORM]);
         }
     }
 }
