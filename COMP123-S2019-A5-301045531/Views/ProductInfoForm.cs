@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP123_S2019_A5_301045531
+namespace COMP123_S2019_A5_301045531.Views
 {
-    public partial class Form1 : Form
+    public partial class ProductInfoForm : Form
     {
-        public Form1()
+        public ProductInfoForm()
         {
             InitializeComponent();
         }
