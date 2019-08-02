@@ -32,5 +32,16 @@ namespace COMP123_S2019_A5_301045531.Views
         {
             Application.Exit();
         }
+
+        private void ProductDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.SELECT_FORM].Hide();
+            Program.Forms[FormName.PRODUCTINFO_FORM].Show();
+        }
     }
 }
