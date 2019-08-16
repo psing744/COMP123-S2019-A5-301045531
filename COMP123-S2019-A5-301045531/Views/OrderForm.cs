@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP123_S2019_A5_301045531.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,28 +26,36 @@ namespace COMP123_S2019_A5_301045531.Views
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); 
         }
 
         private void OrderForm_Activated(object sender, EventArgs e)
         {
-            conditionOutputLabel.Text = Program.product.condition;
-            priceOutputLabel.Text = Program.product.cost + "";
-            salesTaxOutputLabel.Text = (Program.product.cost * 0.13) + "";
-            totalPriceOutputLabel.Text = (Program.product.cost * 1.13) + "";
-            platformOutputLabel.Text = Program.product.platform;
-            osOutputLabel.Text = Program.product.os;
-            manufacturerOutputLabel.Text = Program.product.manufacturer;
-            modelOutputLabel.Text = Program.product.model;
-            memoryOutputLabel.Text = Program.product.ram_size;
-            lcdSizeOutputLabel.Text = Program.product.LCDsize;
-            hddOutputLabel.Text = Program.product.hdd;
-            cpuBrandOutputLabel.Text = Program.product.CPU_Brand;
-            cpuNumberOutputLabel.Text = Program.product.CPUnumber;
-            gpuTypeOuputLabel.Text = Program.product.GPUtype;
-            cpuTypeOutputLabel.Text = Program.product.CPU_Type;
-            cpuSpeedOutputLabel.Text = Program.product.CPU_Speed;
-            webcamOutputLabel.Text = Program.product.WebCam;
+            conditionOutputLabel.Text = Program.Product.condition;
+            priceOutputLabel.Text = string.Format("{0:c}",Program.Product.cost);
+            salesTaxOutputLabel.Text = string.Format("{0:c}", Convert.ToDouble(Program.Product.cost) * 0.13);
+            totalPriceOutputLabel.Text = string.Format("{0:c}",Convert.ToDouble(Program.Product.cost) * 1.13);
+            platformOutputLabel.Text = Program.Product.platform;
+            osOutputLabel.Text = Program.Product.OS;
+            manufacturerOutputLabel.Text = Program.Product.manufacturer;
+            modelOutputLabel.Text = Program.Product.model;
+            memoryOutputLabel.Text = Program.Product.RAM_size;
+            lcdSizeOutputLabel.Text = Program.Product.screensize;
+            hddOutputLabel.Text = Program.Product.HDD_size;
+            cpuBrandOutputLabel.Text = Program.Product.CPU_brand;
+            cpuNumberOutputLabel.Text = Program.Product.CPU_number;
+            gpuTypeOuputLabel.Text = Program.Product.GPU_Type;
+            cpuTypeOutputLabel.Text = Program.Product.CPU_type;
+            cpuSpeedOutputLabel.Text = Program.Product.CPU_speed;
+            webcamOutputLabel.Text = Program.Product.webcam;
+            if (Program.Product.platform=="Laptop")
+            {
+                laptopPictureBox.Image = Resources.laptop;
+            }
+            if(Program.Product.platform=="Desktop PC")
+            {
+                laptopPictureBox.Image = Resources.desktop;
+            }
         }
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)

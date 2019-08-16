@@ -81,9 +81,10 @@
             // 
             // welcomePictureBox
             // 
-            this.welcomePictureBox.Location = new System.Drawing.Point(103, 103);
+            this.welcomePictureBox.Image = global::COMP123_S2019_A5_301045531.Properties.Resources.startFormLogo;
+            this.welcomePictureBox.Location = new System.Drawing.Point(16, 44);
             this.welcomePictureBox.Name = "welcomePictureBox";
-            this.welcomePictureBox.Size = new System.Drawing.Size(100, 50);
+            this.welcomePictureBox.Size = new System.Drawing.Size(256, 214);
             this.welcomePictureBox.TabIndex = 2;
             this.welcomePictureBox.TabStop = false;
             // 

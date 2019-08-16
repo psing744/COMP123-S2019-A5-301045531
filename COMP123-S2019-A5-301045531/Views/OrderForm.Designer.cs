@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,10 +72,11 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.priceOutputLabel = new System.Windows.Forms.Label();
             this.salesTaxLabel = new System.Windows.Forms.Label();
-            this.laptopPictureBox = new System.Windows.Forms.PictureBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.finishButton = new System.Windows.Forms.Button();
+            this.laptopPictureBox = new System.Windows.Forms.PictureBox();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SystemComponentsGroupBox.SuspendLayout();
             this.priceGroupBox.SuspendLayout();
@@ -104,20 +104,10 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
-            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -132,7 +122,7 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.backToolStripMenuItem.Text = "&Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -391,9 +381,9 @@
             // 
             this.modelOutputLabel.BackColor = System.Drawing.Color.White;
             this.modelOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modelOutputLabel.Location = new System.Drawing.Point(328, 50);
+            this.modelOutputLabel.Location = new System.Drawing.Point(308, 50);
             this.modelOutputLabel.Name = "modelOutputLabel";
-            this.modelOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.modelOutputLabel.Size = new System.Drawing.Size(102, 22);
             this.modelOutputLabel.TabIndex = 11;
             this.modelOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -402,7 +392,7 @@
             this.modelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modelLabel.Location = new System.Drawing.Point(222, 50);
             this.modelLabel.Name = "modelLabel";
-            this.modelLabel.Size = new System.Drawing.Size(100, 23);
+            this.modelLabel.Size = new System.Drawing.Size(80, 23);
             this.modelLabel.TabIndex = 12;
             this.modelLabel.Text = "Model";
             this.modelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -413,7 +403,7 @@
             this.manufacturerOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manufacturerOutputLabel.Location = new System.Drawing.Point(128, 51);
             this.manufacturerOutputLabel.Name = "manufacturerOutputLabel";
-            this.manufacturerOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.manufacturerOutputLabel.Size = new System.Drawing.Size(101, 22);
             this.manufacturerOutputLabel.TabIndex = 9;
             this.manufacturerOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -431,9 +421,9 @@
             // 
             this.platformOutputLabel.BackColor = System.Drawing.Color.White;
             this.platformOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.platformOutputLabel.Location = new System.Drawing.Point(328, 15);
+            this.platformOutputLabel.Location = new System.Drawing.Point(308, 15);
             this.platformOutputLabel.Name = "platformOutputLabel";
-            this.platformOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.platformOutputLabel.Size = new System.Drawing.Size(102, 22);
             this.platformOutputLabel.TabIndex = 7;
             this.platformOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -442,7 +432,7 @@
             this.platformLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.platformLabel.Location = new System.Drawing.Point(222, 15);
             this.platformLabel.Name = "platformLabel";
-            this.platformLabel.Size = new System.Drawing.Size(100, 23);
+            this.platformLabel.Size = new System.Drawing.Size(80, 23);
             this.platformLabel.TabIndex = 8;
             this.platformLabel.Text = "Platform";
             this.platformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -453,7 +443,7 @@
             this.conditionOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conditionOutputLabel.Location = new System.Drawing.Point(128, 16);
             this.conditionOutputLabel.Name = "conditionOutputLabel";
-            this.conditionOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.conditionOutputLabel.Size = new System.Drawing.Size(101, 22);
             this.conditionOutputLabel.TabIndex = 5;
             this.conditionOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -486,9 +476,9 @@
             // 
             this.totalPriceOutputLabel.BackColor = System.Drawing.Color.White;
             this.totalPriceOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceOutputLabel.Location = new System.Drawing.Point(216, 117);
+            this.totalPriceOutputLabel.Location = new System.Drawing.Point(179, 117);
             this.totalPriceOutputLabel.Name = "totalPriceOutputLabel";
-            this.totalPriceOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.totalPriceOutputLabel.Size = new System.Drawing.Size(119, 22);
             this.totalPriceOutputLabel.TabIndex = 9;
             this.totalPriceOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -496,9 +486,9 @@
             // 
             this.salesTaxOutputLabel.BackColor = System.Drawing.Color.White;
             this.salesTaxOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesTaxOutputLabel.Location = new System.Drawing.Point(216, 71);
+            this.salesTaxOutputLabel.Location = new System.Drawing.Point(201, 71);
             this.salesTaxOutputLabel.Name = "salesTaxOutputLabel";
-            this.salesTaxOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.salesTaxOutputLabel.Size = new System.Drawing.Size(97, 22);
             this.salesTaxOutputLabel.TabIndex = 9;
             this.salesTaxOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -526,9 +516,9 @@
             // 
             this.priceOutputLabel.BackColor = System.Drawing.Color.White;
             this.priceOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceOutputLabel.Location = new System.Drawing.Point(216, 34);
+            this.priceOutputLabel.Location = new System.Drawing.Point(201, 34);
             this.priceOutputLabel.Name = "priceOutputLabel";
-            this.priceOutputLabel.Size = new System.Drawing.Size(82, 22);
+            this.priceOutputLabel.Size = new System.Drawing.Size(97, 22);
             this.priceOutputLabel.TabIndex = 5;
             this.priceOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -541,14 +531,6 @@
             this.salesTaxLabel.TabIndex = 10;
             this.salesTaxLabel.Text = "Sales Tax (13%)";
             this.salesTaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // laptopPictureBox
-            // 
-            this.laptopPictureBox.Location = new System.Drawing.Point(464, 49);
-            this.laptopPictureBox.Name = "laptopPictureBox";
-            this.laptopPictureBox.Size = new System.Drawing.Size(177, 187);
-            this.laptopPictureBox.TabIndex = 3;
-            this.laptopPictureBox.TabStop = false;
             // 
             // CancelButton
             // 
@@ -579,6 +561,25 @@
             this.finishButton.Text = "Finish";
             this.finishButton.UseVisualStyleBackColor = true;
             this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
+            // 
+            // laptopPictureBox
+            // 
+            this.laptopPictureBox.Image = global::COMP123_S2019_A5_301045531.Properties.Resources.desktop;
+            this.laptopPictureBox.Location = new System.Drawing.Point(503, 83);
+            this.laptopPictureBox.Name = "laptopPictureBox";
+            this.laptopPictureBox.Size = new System.Drawing.Size(171, 153);
+            this.laptopPictureBox.TabIndex = 3;
+            this.laptopPictureBox.TabStop = false;
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // OrderForm
             // 
