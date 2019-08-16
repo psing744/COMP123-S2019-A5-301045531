@@ -56,22 +56,22 @@ namespace COMP123_S2019_A5_301045531.Views
                         File.Open(ProductOpenFileDialog.FileName, FileMode.Open)))
                     {
                         // read from the file
-                        Program.product.productID = int.Parse(inputStream.ReadLine());
-                        Program.product.condition = inputStream.ReadLine();
-                        Program.product.cost = double.Parse(inputStream.ReadLine());
-                        Program.product.platform = inputStream.ReadLine();
-                        Program.product.os = inputStream.ReadLine();
-                        Program.product.manufacturer = inputStream.ReadLine();
-                        Program.product.model = inputStream.ReadLine();
-                        Program.product.memory = inputStream.ReadLine();
-                        Program.product.LCDsize = inputStream.ReadLine();
-                        Program.product.hdd = inputStream.ReadLine();
-                        Program.product.CPUbrand = inputStream.ReadLine();
-                        Program.product.CPUnumber = inputStream.ReadLine();
-                        Program.product.GPUtype = inputStream.ReadLine();
-                        Program.product.CPUtype = inputStream.ReadLine();
-                        Program.product.CPUspeed = inputStream.ReadLine();
-                        Program.product.WebCam = inputStream.ReadLine();
+                        Program.Product.productID = int.Parse(inputStream.ReadLine());
+                        Program.Product.condition = inputStream.ReadLine();
+                        Program.Product.cost = double.Parse(inputStream.ReadLine());
+                        Program.Product.platform = inputStream.ReadLine();
+                        Program.Product.OS = inputStream.ReadLine();
+                        Program.Product.manufacturer = inputStream.ReadLine();
+                        Program.Product.model = inputStream.ReadLine();
+                        Program.Product.RAM_size = inputStream.ReadLine();
+                        Program.Product.screensize = inputStream.ReadLine();
+                        Program.Product.HDD_size = inputStream.ReadLine();
+                        Program.Product.CPU_brand = inputStream.ReadLine();
+                        Program.Product.CPU_number = inputStream.ReadLine();
+                        Program.Product.GPU_Type = inputStream.ReadLine();
+                        Program.Product.CPU_type = inputStream.ReadLine();
+                        Program.Product.CPU_speed = inputStream.ReadLine();
+                        Program.Product.WebCam = inputStream.ReadLine();
 
                         // cleanup
                         inputStream.Close();
@@ -113,22 +113,22 @@ namespace COMP123_S2019_A5_301045531.Views
                     File.Open(ProductSaveFileDialog.FileName, FileMode.Create)))
                 {
                     // write content in string format
-                    outputStream.WriteLine(Program.product.productID);
-                    outputStream.WriteLine(Program.product.condition);
-                    outputStream.WriteLine(Program.product.cost);
-                    outputStream.WriteLine(Program.product.platform);
-                    outputStream.WriteLine(Program.product.os);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.model);
-                    outputStream.WriteLine(Program.product.memory);
-                    outputStream.WriteLine(Program.product.LCDsize);
-                    outputStream.WriteLine(Program.product.hdd);
-                    outputStream.WriteLine(Program.product.CPUbrand);
-                    outputStream.WriteLine(Program.product.CPUnumber);
-                    outputStream.WriteLine(Program.product.GPUtype);
-                    outputStream.WriteLine(Program.product.CPUtype);
-                    outputStream.WriteLine(Program.product.CPUspeed);
-                    outputStream.WriteLine(Program.product.WebCam);
+                    outputStream.WriteLine(Program.Product.productID);
+                    outputStream.WriteLine(Program.Product.condition);
+                    outputStream.WriteLine(Program.Product.cost);
+                    outputStream.WriteLine(Program.Product.platform);
+                    outputStream.WriteLine(Program.Product.OS);
+                    outputStream.WriteLine(Program.Product.manufacturer);
+                    outputStream.WriteLine(Program.Product.model);
+                    outputStream.WriteLine(Program.Product.RAM_size);
+                    outputStream.WriteLine(Program.Product.screensize);
+                    outputStream.WriteLine(Program.Product.HDD_size);
+                    outputStream.WriteLine(Program.Product.CPU_brand);
+                    outputStream.WriteLine(Program.Product.CPU_number);
+                    outputStream.WriteLine(Program.Product.GPU_Type);
+                    outputStream.WriteLine(Program.Product.CPU_type);
+                    outputStream.WriteLine(Program.Product.CPU_speed);
+                    outputStream.WriteLine(Program.Product.webcam);
                     // cleanup
                     outputStream.Close();
                     outputStream.Dispose();
@@ -143,22 +143,22 @@ namespace COMP123_S2019_A5_301045531.Views
 
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
-            ProductIdOutputLabel.Text = Program.product.productID+"";
-            conditionOutputLabel.Text = Program.product.condition;
-            costOutputLabel.Text = Program.product.cost+"";
-            platformOutputLabel.Text = Program.product.platform;
-            osOutputLabel.Text = Program.product.os;
-            manufacturerOutputLabel.Text = Program.product.manufacturer;
-            modelOutputLabel.Text = Program.product.model;
-            memoryOutputLabel.Text = Program.product.memory;
-            lcdSizeOutputLabel.Text = Program.product.LCDsize;
-            hddOutputLabel.Text = Program.product.hdd;
-            cpuBrandOutputLabel.Text = Program.product.CPUbrand;
-            cpuNumberOutputLabel.Text = Program.product.CPUnumber;
-            gpuTypeOuputLabel.Text = Program.product.GPUtype;
-            cpuTypeOutputLabel.Text = Program.product.CPUtype;
-            cpuSpeedOutputLabel.Text = Program.product.CPUspeed;
-            webcamOutputLabel.Text = Program.product.WebCam;
+            ProductIdOutputLabel.Text = Program.Product.productID+"";
+            conditionOutputLabel.Text = Program.Product.condition;
+            costOutputLabel.Text = Program.Product.cost+"";
+            platformOutputLabel.Text = Program.Product.platform;
+            osOutputLabel.Text = Program.Product.OS;
+            manufacturerOutputLabel.Text = Program.Product.manufacturer;
+            modelOutputLabel.Text = Program.Product.model;
+            memoryOutputLabel.Text = Program.Product.RAM_size;
+            lcdSizeOutputLabel.Text = Program.Product.screensize;
+            hddOutputLabel.Text = Program.Product.HDD_size;
+            cpuBrandOutputLabel.Text = Program.Product.CPU_brand;
+            cpuNumberOutputLabel.Text = Program.Product.CPU_number;
+            gpuTypeOuputLabel.Text = Program.Product.GPU_Type;
+            cpuTypeOutputLabel.Text = Program.Product.CPU_type;
+            cpuSpeedOutputLabel.Text = Program.Product.CPU_speed;
+            webcamOutputLabel.Text = Program.Product.webcam;
         }
     }
 }

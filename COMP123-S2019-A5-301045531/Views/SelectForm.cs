@@ -50,22 +50,22 @@ namespace COMP123_S2019_A5_301045531.Views
             // displays selected hardware in end of form
             SelectedHardwareLabel.Text = $"{cells[2].Value} {cells[3].Value} Priced at: {cells[1].Value}";
 
-            Program.product.productID = int.Parse(cells[0].Value.ToString());
-            Program.product.condition = cells[10].Value.ToString();
-            Program.product.cost = double.Parse(cells[1].Value.ToString());
-            Program.product.platform = cells[11].Value.ToString();
-            Program.product.os = cells[12].Value.ToString();
-            Program.product.manufacturer = cells[2].Value.ToString();
-            Program.product.model = cells[3].Value.ToString();
-            Program.product.memory = cells[4].Value.ToString();
-            Program.product.LCDsize = cells[5].Value.ToString();
-            Program.product.hdd = cells[13].Value.ToString();
-            Program.product.CPUbrand = cells[6].Value.ToString();
-            Program.product.CPUnumber = cells[8].Value.ToString();
-            Program.product.GPUtype = cells[13].Value.ToString();
-            Program.product.CPUtype = cells[7].Value.ToString();
-            Program.product.CPUspeed = cells[9].Value.ToString();
-            Program.product.WebCam = cells[14].Value.ToString();
+            Program.Product.productID = int.Parse(cells[0].Value.ToString());
+            Program.Product.condition = cells[10].Value.ToString();
+            Program.Product.cost = double.Parse(cells[1].Value.ToString());
+            Program.Product.platform = cells[11].Value.ToString();
+            Program.Product.OS = cells[12].Value.ToString();
+            Program.Product.manufacturer = cells[2].Value.ToString();
+            Program.Product.model = cells[3].Value.ToString();
+            Program.Product.RAM_size = cells[4].Value.ToString();
+            Program.Product.screensize = cells[5].Value.ToString();
+            Program.Product.HDD_size = cells[13].Value.ToString();
+            Program.Product.CPU_brand = cells[6].Value.ToString();
+            Program.Product.CPU_number = cells[8].Value.ToString();
+            Program.Product.GPU_Type = cells[13].Value.ToString();
+            Program.Product.CPU_type = cells[7].Value.ToString();
+            Program.Product.CPU_speed = cells[9].Value.ToString();
+            Program.Product.webcam = cells[14].Value.ToString();
         }
     }
 }
