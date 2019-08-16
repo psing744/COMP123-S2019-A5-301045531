@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name - Pritpal Singh
+ * Id# 301045531
+ * desc- This is product info form class
+ */
+
 namespace COMP123_S2019_A5_301045531.Views
 {
     public partial class ProductInfoForm : Form
@@ -19,30 +25,55 @@ namespace COMP123_S2019_A5_301045531.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// event handler for next button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
-            Program.Forms[FormName.PRODUCTINFO_FORM].Hide();
+            this.Hide();
             Program.Forms[FormName.ORDER_FORM].Show();
         }
 
+        /// <summary>
+        /// event handler for select another product button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
         {
-            Program.Forms[FormName.PRODUCTINFO_FORM].Hide();
+            this.Hide();
             Program.Forms[FormName.SELECT_FORM].Show();
         }
 
+        /// <summary>
+        /// event handler for cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// event handler for open button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenSavedOrder();
+            OpenSavedOrder(sender,e);
             ProductInfoForm_Activated(sender, e);
         }
 
-        public void OpenSavedOrder()
+        /// <summary>
+        /// method for opening saved order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void OpenSavedOrder(object sender,EventArgs e)
         {
             // configure the file dailog
             ProductOpenFileDialog.FileName = "Product.txt";
@@ -96,7 +127,8 @@ namespace COMP123_S2019_A5_301045531.Views
                     MessageBox.Show("ERROR: " + exception.Message + "\n\nPlease select the appropriate file type", "ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }      
+            }
+            ProductInfoForm_Activated(sender, e);
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +177,7 @@ namespace COMP123_S2019_A5_301045531.Views
 
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
+            // giving values of product info form labels
             ProductIdOutputLabel.Text = Program.Product.productID+"";
             conditionOutputLabel.Text = Program.Product.condition;
             costOutputLabel.Text = string.Format("{0:c}",Program.Product.cost);

@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name - Pritpal Singh
+ * Id# 301045531
+ * desc- This is order form class
+ */
+
 namespace COMP123_S2019_A5_301045531.Views
 {
     public partial class OrderForm : Form
@@ -18,17 +24,32 @@ namespace COMP123_S2019_A5_301045531.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// event handler for back button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.ORDER_FORM].Hide();
-            Program.Forms[FormName.PRODUCTINFO_FORM].Show();
+            Program.productInfoForm.Show();
         }
 
+        /// <summary>
+        /// event handler for cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
         }
 
+        /// <summary>
+        /// event hanfler for order form activation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Activated(object sender, EventArgs e)
         {
             conditionOutputLabel.Text = Program.Product.condition;
@@ -58,11 +79,21 @@ namespace COMP123_S2019_A5_301045531.Views
             }
         }
 
+        /// <summary>
+        /// event handler for print button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Your selection is printing", "Printing", MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// event handler for finish button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void finishButton_Click(object sender, EventArgs e)
         {
             DialogResult result= MessageBox.Show("Thanks for shopping with us\nYour order will be processed in 7-10 business days", "Thank You", MessageBoxButtons.OK);
@@ -70,6 +101,16 @@ namespace COMP123_S2019_A5_301045531.Views
             {
                 Application.Exit();
             }
+        }
+
+        /// <summary>
+        /// event handler for about button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.ABOUT_FORM].ShowDialog();
         }
     }
 }

@@ -7,6 +7,12 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name - Pritpal Singh
+ * Id# 301045531
+ * desc- This is about form class
+ */
+
 namespace COMP123_S2019_A5_301045531.Views
 {
     public partial class AboutForm : Form

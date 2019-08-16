@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name - Pritpal Singh
+ * Id# 301045531
+ * desc- This is select form class
+ */
+
 namespace COMP123_S2019_A5_301045531.Views
 {
     public partial class SelectForm : Form
@@ -19,6 +25,11 @@ namespace COMP123_S2019_A5_301045531.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// event handler for load of select form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             using(var db=new DollarComputersContext())
@@ -28,17 +39,32 @@ namespace COMP123_S2019_A5_301045531.Views
             }
         }
 
+        /// <summary>
+        /// event handler for cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// event handler for next button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.SELECT_FORM].Hide();
-            Program.Forms[FormName.PRODUCTINFO_FORM].Show();
+            Program.productInfoForm.Show();
         }
 
+        /// <summary>
+        /// event button for selection change on data grid view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             // local variables that are used as aliases
@@ -49,6 +75,7 @@ namespace COMP123_S2019_A5_301045531.Views
             // displays selected hardware in end of form
             SelectedHardwareLabel.Text = $"{cells[2].Value} {cells[3].Value} Priced at: {cells[1].Value:c}";
 
+            // storing values of product selection to class
             Program.Product.productID = short.Parse(cells[0].Value.ToString());
             Program.Product.condition = cells[14].Value.ToString();
             Program.Product.cost = decimal.Parse(cells[1].Value.ToString());

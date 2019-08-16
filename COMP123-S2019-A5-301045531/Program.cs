@@ -13,6 +13,7 @@ namespace COMP123_S2019_A5_301045531
         // static members
         public static Dictionary<FormName, Form> Forms;
         public static Product Product;
+        public static ProductInfoForm productInfoForm;
 
         /// <summary>
         /// The main entry point for the application.
@@ -29,7 +30,13 @@ namespace COMP123_S2019_A5_301045531
             Forms.Add(FormName.SPLASH_FORM, new SplashForm());
             Forms.Add(FormName.START_FORM, new StartForm());
             Forms.Add(FormName.SELECT_FORM, new SelectForm());
-            Forms.Add(FormName.PRODUCTINFO_FORM, new ProductInfoForm());
+
+            // instantiating product info form differently as was unable to access OpenSavedOrder method of
+            // productInfoForm in startForm using dictionary
+            productInfoForm = new ProductInfoForm();
+
+            //Forms.Add(FormName.PRODUCTINFO_FORM, new ProductInfoForm());
+
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
 
             Product = new Product();
