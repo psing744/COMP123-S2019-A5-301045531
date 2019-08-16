@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using COMP123_S2019_A5_301045531.Controllers;
 
 namespace COMP123_S2019_A5_301045531
 {
@@ -14,7 +13,6 @@ namespace COMP123_S2019_A5_301045531
         // static members
         public static Dictionary<FormName, Form> Forms;
         public static Product Product;
-        public static product product;
 
         /// <summary>
         /// The main entry point for the application.
@@ -35,7 +33,6 @@ namespace COMP123_S2019_A5_301045531
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
 
             Product = new Product();
-            product = new product();
 
             Application.Run(Forms[FormName.SPLASH_FORM]);
         }
