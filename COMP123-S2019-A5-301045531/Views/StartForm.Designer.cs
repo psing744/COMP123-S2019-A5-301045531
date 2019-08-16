@@ -66,6 +66,7 @@
             this.openSavedOrderButton.TabIndex = 1;
             this.openSavedOrderButton.Text = "Open a Saved Order";
             this.openSavedOrderButton.UseVisualStyleBackColor = true;
+            this.openSavedOrderButton.Click += new System.EventHandler(this.openSavedOrderButton_Click);
             // 
             // ExitButton
             // 

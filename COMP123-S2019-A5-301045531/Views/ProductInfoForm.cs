@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using COMP123_S2019_A5_301045531.Controllers;
 
 namespace COMP123_S2019_A5_301045531.Views
 {
@@ -63,14 +62,14 @@ namespace COMP123_S2019_A5_301045531.Views
                         Program.product.os = inputStream.ReadLine();
                         Program.product.manufacturer = inputStream.ReadLine();
                         Program.product.model = inputStream.ReadLine();
-                        Program.product.memory = inputStream.ReadLine();
+                        Program.product.ram_size = inputStream.ReadLine();
                         Program.product.LCDsize = inputStream.ReadLine();
                         Program.product.hdd = inputStream.ReadLine();
-                        Program.product.CPUbrand = inputStream.ReadLine();
+                        Program.product.CPU_Brand = inputStream.ReadLine();
                         Program.product.CPUnumber = inputStream.ReadLine();
                         Program.product.GPUtype = inputStream.ReadLine();
-                        Program.product.CPUtype = inputStream.ReadLine();
-                        Program.product.CPUspeed = inputStream.ReadLine();
+                        Program.product.CPU_Type = inputStream.ReadLine();
+                        Program.product.CPU_Speed = inputStream.ReadLine();
                         Program.product.WebCam = inputStream.ReadLine();
 
                         // cleanup
@@ -120,14 +119,14 @@ namespace COMP123_S2019_A5_301045531.Views
                     outputStream.WriteLine(Program.product.os);
                     outputStream.WriteLine(Program.product.manufacturer);
                     outputStream.WriteLine(Program.product.model);
-                    outputStream.WriteLine(Program.product.memory);
+                    outputStream.WriteLine(Program.product.ram_size);
                     outputStream.WriteLine(Program.product.LCDsize);
                     outputStream.WriteLine(Program.product.hdd);
-                    outputStream.WriteLine(Program.product.CPUbrand);
+                    outputStream.WriteLine(Program.product.CPU_Brand);
                     outputStream.WriteLine(Program.product.CPUnumber);
                     outputStream.WriteLine(Program.product.GPUtype);
-                    outputStream.WriteLine(Program.product.CPUtype);
-                    outputStream.WriteLine(Program.product.CPUspeed);
+                    outputStream.WriteLine(Program.product.CPU_Type);
+                    outputStream.WriteLine(Program.product.CPU_Speed);
                     outputStream.WriteLine(Program.product.WebCam);
                     // cleanup
                     outputStream.Close();
@@ -150,14 +149,14 @@ namespace COMP123_S2019_A5_301045531.Views
             osOutputLabel.Text = Program.product.os;
             manufacturerOutputLabel.Text = Program.product.manufacturer;
             modelOutputLabel.Text = Program.product.model;
-            memoryOutputLabel.Text = Program.product.memory;
+            memoryOutputLabel.Text = Program.product.ram_size;
             lcdSizeOutputLabel.Text = Program.product.LCDsize;
             hddOutputLabel.Text = Program.product.hdd;
-            cpuBrandOutputLabel.Text = Program.product.CPUbrand;
+            cpuBrandOutputLabel.Text = Program.product.CPU_Brand;
             cpuNumberOutputLabel.Text = Program.product.CPUnumber;
             gpuTypeOuputLabel.Text = Program.product.GPUtype;
-            cpuTypeOutputLabel.Text = Program.product.CPUtype;
-            cpuSpeedOutputLabel.Text = Program.product.CPUspeed;
+            cpuTypeOutputLabel.Text = Program.product.CPU_Type;
+            cpuSpeedOutputLabel.Text = Program.product.CPU_Speed;
             webcamOutputLabel.Text = Program.product.WebCam;
         }
     }

@@ -15,14 +15,14 @@ namespace COMP123_S2019_A5_301045531.Controllers
         public string os;
         public string manufacturer;
         public string model;
-        public string memory;
+        public string ram_size;
         public string LCDsize;
         public string hdd;
-        public string CPUbrand;
+        public string CPU_Brand;
         public string CPUnumber;
         public string GPUtype;
-        public string CPUtype;
-        public string CPUspeed;
+        public string CPU_Type;
+        public string CPU_Speed;
         public string WebCam;
     }
 }
